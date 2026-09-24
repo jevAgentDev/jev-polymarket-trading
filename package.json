@@ -7,6 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
+    "web": "tsx --env-file=.env src/web/server.ts",
     "watch": "tsx --env-file=.env src/cli/watch.ts",
     "tick": "tsx --env-file=.env src/cli/once.ts",
     "once": "tsx --env-file=.env src/cli/once.ts",

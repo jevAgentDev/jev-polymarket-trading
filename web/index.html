@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JEV — Prediction Terminal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header>
+    <a class="brand" href="/"><span class="brand-mark">J</span><span>JEV<span class="muted">/TERMINAL</span></span></a>
+    <nav><button class="active">Terminal</button><button>Positions</button><button>History</button></nav>
+    <div class="header-right"><div class="live-dot"><i></i><span id="connection">CONNECTING</span></div><div class="mode">PAPER MODE</div></div>
+  </header>
+
+  <main>
+    <section class="hero card">
+      <div class="asset"><div class="btc">₿</div><div><span class="eyebrow">POLYMARKET · 5 MINUTE</span><h1>Bitcoin Up or Down</h1><p id="slug">Loading active market…</p></div></div>
+      <div class="countdown"><span>WINDOW CLOSES IN</span><strong id="countdown">--:--</strong><div class="progress"><i id="timeProgress"></i></div></div>
+    </section>
+
+    <section class="stats">
+      <article class="stat card"><span>BTC / USD</span><strong id="btcPrice">—</strong><small id="btcMove">Awaiting feed</small></article>
+      <article class="stat card"><span>UP PRICE</span><strong class="green" id="upPrice">—</strong><small id="upBook">Bid — · Ask —</small></article>
+      <article class="stat card"><span>DOWN PRICE</span><strong class="red" id="downPrice">—</strong><small id="downBook">Bid — · Ask —</small></article>
+      <article class="stat card"><span>SESSION P&L</span><strong id="pnl">+$0.00</strong><small>Simulated performance</small></article>
+    </section>
+
+    <section class="workspace">
+      <article class="chart-card card">
+        <div class="card-head"><div><span class="eyebrow">PROBABILITY TRACK</span><h2>Market pulse</h2></div><div class="legend"><span><i class="up"></i>UP</span><span><i class="down"></i>DOWN</span></div></div>
+        <canvas id="chart"></canvas>
+        <div class="chart-foot"><span>5M WINDOW</span><span id="lastUpdate">Waiting for the first tick</span></div>
+      </article>
+
+      <aside class="decision card">
+        <div class="card-head"><div><span class="eyebrow">JEV SIGNAL</span><h2>Decision engine</h2></div><span class="model">JEV 1.13</span></div>
+        <div class="signal-orb" id="signalOrb"><div><span id="action">WAIT</span><strong id="confidence">—</strong></div></div>
+        <p id="reason">Collecting market context before making a simulated decision.</p>
+        <div class="meter-label"><span>Confidence threshold</span><b>90%</b></div><div class="meter"><i id="confidenceBar"></i></div>
+        <div class="guardrails"><span>MAX ASK <b>70¢</b></span><span>MIN EDGE <b>10%</b></span><span>ENTRY <b>1×</b></span></div>
+      </aside>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="card position"><div class="card-head"><div><span class="eyebrow">PAPER PORTFOLIO</span><h2>Current position</h2></div><span id="positionBadge" class="flat">FLAT</span></div><div class="position-row"><div><span>Outcome</span><strong id="posSide">No position</strong></div><div><span>Entry</span><strong id="posEntry">—</strong></div><div><span>Size</span><strong id="posSize">—</strong></div><div><span>Unrealized</span><strong id="unrealized">—</strong></div></div></article>
+      <article class="card activity"><div class="card-head"><div><span class="eyebrow">SYSTEM TAPE</span><h2>Live activity</h2></div><i class="pulse"></i></div><div id="activity"><div class="event"><time>--:--:--</time><span>Waiting for server stream</span><b>SYS</b></div></div></article>
+    </section>
+  </main>
+  <footer><span>JEV Prediction Terminal · Paper simulation only</span><span>Market data: Polymarket + Binance</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
