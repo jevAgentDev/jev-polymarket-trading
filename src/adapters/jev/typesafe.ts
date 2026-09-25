@@ -19,12 +19,13 @@ const DIRECTION_Q = [
 
 export function typeSafeJudge(opts: {
   apiKey: string;
-  model: "jev-1.13.0";
+  model: string;
+  baseURL?: string;
 }): Judge {
   if (!opts.apiKey) {
     throw new Error("TYPESAFE_API_KEY missing — refuse silent stub");
   }
-  const client = new TypeSafeClient({ apiKey: opts.apiKey });
+  const client = new TypeSafeClient({ apiKey: opts.apiKey, baseURL: opts.baseURL });
 
   return {
     async ask(facts: FactsForJev): Promise<JudgeOpinion> {

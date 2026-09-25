@@ -20,6 +20,8 @@ import type {
 
 export type EnvBag = {
   TYPESAFE_API_KEY?: string;
+  TYPESAFE_BASE_URL?: string;
+  TYPESAFE_MODEL?: string;
   POLYMARKET_SOURCE?: string;
   BTC_UPDOWN_SLUG?: string;
   TICK_MS?: string;
@@ -123,7 +125,11 @@ export function loadConfig(
         "TYPESAFE_API_KEY is required (or pass --stub-judge for offline smoke)",
       );
     }
-    judge = typeSafeJudge({ apiKey, model: "jev-1.13.0" });
+    judge = typeSafeJudge({
+      apiKey,
+      baseURL: e.TYPESAFE_BASE_URL?.trim() || undefined,
+      model: e.TYPESAFE_MODEL?.trim() || "jev-1.13.0",
+    });
   }
 
   if (opts.overrides?.spot) {

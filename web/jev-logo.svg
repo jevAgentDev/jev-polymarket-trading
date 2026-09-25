@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">JEV Fund</title>
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#58bfff"/><stop offset=".52" stop-color="#a985ff"/><stop offset="1" stop-color="#ff91d2"/></linearGradient></defs>
+  <rect width="512" height="512" rx="96" fill="url(#g)"/>
+  <path d="M93 405V112l142 80 72-42 112 64v125L235 443 93 363" fill="none" stroke="#fff" stroke-width="32" stroke-linejoin="round"/>
+  <path d="M128 191l128-75 93 53v87l-77 45v96l-92 53-74-43v-86l64-37v-81l86-50 74 43v85l-76 44-72-42v-84l74-43m-86 168 72 42m0-125 77 44" fill="none" stroke="#111214" stroke-width="27" stroke-linejoin="miter"/>
+</svg>

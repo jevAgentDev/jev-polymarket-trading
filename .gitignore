@@ -4,3 +4,4 @@ dist/
 *.log
 .DS_Store
 data/pnl.jsonl
+data/jev-decisions.jsonl

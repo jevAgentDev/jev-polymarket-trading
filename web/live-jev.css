@@ -1,0 +1,6 @@
+.jev-source{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:18px 0 4px;border-top:1px solid #171713;border-bottom:1px solid #171713;background:#e9e7df}
+.jev-source span{display:flex;min-height:58px;padding:10px 12px;flex-direction:column;justify-content:center;color:#79776f;font:10px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}
+.jev-source span+span{border-left:1px solid #aaa79c}
+.jev-source b{margin-top:6px;color:#11110e;font-size:11px;letter-spacing:.04em}
+@media(max-width:760px){.jev-source{grid-template-columns:1fr 1fr}.jev-source span:nth-child(3){border-left:0;border-top:1px solid #aaa79c}.jev-source span:nth-child(4){border-top:1px solid #aaa79c}}
+.sub-panel{display:none!important}
